@@ -1,8 +1,17 @@
 public class mahasiswa07 {
+
+    public mahasiswa07(String nm, String nim, double ipk, String kls) {
+        nama = nm;
+        this.nim = nim;
+        this.ipk = ipk;
+        kelas = kls;
+    }
+
     String nama;
     String nim;
     String kelas;
     double ipk;
+
     
     void tampilInformasi() {
         System.out.println("Nama : " + nama);
