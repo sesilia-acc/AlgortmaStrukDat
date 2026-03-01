@@ -7,11 +7,13 @@ public class mahasiswa07 {
         kelas = kls;
     }
 
+    public mahasiswa07() {
+    }
+
     String nama;
     String nim;
     String kelas;
     double ipk;
-
     
     void tampilInformasi() {
         System.out.println("Nama : " + nama);
