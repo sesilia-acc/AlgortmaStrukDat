@@ -10,9 +10,7 @@ public class mahasiswa07 {
     public mahasiswa07() {
     }
 
-    String nama;
-    String nim;
-    String kelas;
+    String nama, nim, kelas;
     double ipk;
     
     void tampilInformasi() {
