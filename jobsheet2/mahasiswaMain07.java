@@ -14,6 +14,9 @@ public class mahasiswaMain07 {
         mahasiswa07 mhs2 = new mahasiswa07("Annisa Nabila", "2141720160", 3.25, "TI 2L");
         mhs2.updateIpk(3.30);
         mhs2.tampilInformasi();
+
+        mahasiswa07 mhsSesil = new mahasiswa07("Dandin Sesilia", "254107020142", 3.95, "TI 1H");
+        mhsSesil.tampilInformasi();
     }
     
 }
