@@ -10,10 +10,8 @@ public class mataKuliah {
         jmlJam = jumlahjam;
     }
 
-    String kodeMK;
-    String nama;
-    int sks;
-    int jmlJam;
+    String kodeMK, nama;
+    int sks, jmlJam;
 
     void tampilInformasi() {
         System.out.println("Nama\t\t\t: " + nama);
