@@ -10,4 +10,19 @@ public class MataKuliah7 {
         this.sks = sks;
         this.jumlahJam = jumlahJam;
     }
+
+    public void tambahData(String kd, String nm, int eskaes, int jmlJam) {
+        kd = kode;
+        nm = nama;
+        eskaes = sks;
+        jmlJam = jumlahJam;
+    }
+
+    public void cetakInfo() {
+        System.out.println("Kode        : " + kode);
+        System.out.println("Nama        : " + nama);
+        System.out.println("SKS         : " + sks);
+        System.out.println("Jumlah jam  : " + jumlahJam);
+        System.out.println("---------------------------------");
+    }
 }
