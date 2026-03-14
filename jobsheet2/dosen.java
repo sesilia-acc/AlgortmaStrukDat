@@ -1,4 +1,8 @@
 public class dosen {
+    String idDosen, nama, bidangKeahlian;
+    boolean statusAktif;
+    int tahunGabung;
+    
     public dosen() {
 
     }
@@ -11,9 +15,6 @@ public class dosen {
         tahunGabung = thnGabung;
     }
 
-        String idDosen, nama, bidangKeahlian;
-        boolean statusAktif;
-        int tahunGabung;
         
 
     void tampilInformasi(int thn) {
