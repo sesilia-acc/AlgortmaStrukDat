@@ -17,11 +17,12 @@ public class MainPangkat {
 
         System.out.println("\n==== HASIL PANGKAT BRUTE FORCE ====");
         for (Pangkat p : png) {
-            System.out.println(p.nilai + "^" + p.pangkat + ": " + p.PangkatBF(p.nilai, p.pangkat));
+            System.out.println(p.nilai + "^" + p.pangkat + ": " + p.pangkatBF(p.nilai, p.pangkat));
         }
         System.out.println("\n==== HASIL PANGKAT DIVIDE AND CONQUER ====");
         for (Pangkat p : png) {
-            System.out.println(p.nilai + "^" + p.pangkat + ": " + p.PangkatDC(p.nilai, p.pangkat));
+            System.out.println(p.nilai + "^" + p.pangkat + ": " + p.pangkatDC(p.nilai, p.pangkat));
         }
+        sc.close();
     }
 }
