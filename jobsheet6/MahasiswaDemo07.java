@@ -1,23 +1,37 @@
+import java.util.Scanner;
+
 public class MahasiswaDemo07 {
     public static void main(String[] args) {
-        MahasiswaBerprestasi07 list = new MahasiswaBerprestasi07();
-        Mahasiswa07 m1 = new Mahasiswa07("123", "Zidan", "2A", 3.2);
-        Mahasiswa07 m2 = new Mahasiswa07("124", "Ayu", "2A", 3.5);
-        Mahasiswa07 m3 = new Mahasiswa07("125", "Sofi", "2A", 3.1);
-        Mahasiswa07 m4 = new Mahasiswa07("126", "Sita", "2A", 3.9);
-        Mahasiswa07 m5 = new Mahasiswa07("127", "Miki", "2A", 3.7);
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Masukkan kuota mahasiswa: ");
+        int jml = sc.nextInt();
+        sc.nextLine();
 
-        list.tambah(m1);
-        list.tambah(m2);
-        list.tambah(m3);
-        list.tambah(m4);
-        list.tambah(m5);
+        MahasiswaBerprestasi07 data = new MahasiswaBerprestasi07(jml);
 
-        System.out.println("Data mahasiswa sebelum sorting: ");
-        list.tampil();
+        for (int i = 0; i < jml; i++) {
+            System.out.println("\n---- Masukkan data Mahasiswa ke-" + (i+ 1) +" " + "----");
+            System.out.print("NIM   : ");
+            String nim = sc.nextLine();
+            System.out.print("Nama  : " );
+            String nama = sc.nextLine();
+            System.out.print("Kelas : ");
+            String kelas = sc.nextLine();
+            System.out.print("IPK   : ");
+            double ipk = sc.nextDouble();
+            sc.nextLine();
 
-        System.out.println("Data mahasiswa setelah sorting berdasarkan IPK (DESC): ");
-        list.bubbleSort();
-        list.tampil();
+            Mahasiswa07 m = new Mahasiswa07(nim, nama, kelas, ipk);
+            data.tambah(m);
+        }
+        
+        System.out.println("\nData mahasiswa sebelum sorting: ");
+        data.tampil();
+        
+        System.out.println("\nData mahasiswa setelah sorting berdasarkan IPK (DESC): ");
+        data.bubbleSort();
+        data.tampil();
+        
+        sc.close();
     }
 }
