@@ -38,8 +38,11 @@ public class MhsDemo7stack {
                         System.out.println("Menilai tugas dari " + dinilai.nama);
                         System.out.print("Masukkan nilai (0 - 100): ");
                         int nilai = sc.nextInt();
+                        sc.nextLine();
                         dinilai.tugasDinilai(nilai);
-                        System.out.printf("Nlai tugas %s adalah %d\n", dinilai.nama, nilai);
+                        System.out.printf("Nilai tugas %s adalah %d\n", dinilai.nama, nilai);
+                        String biner = stack.konversiBiner(nilai);
+                        System.out.println("Nilai Biner Tugas: " + biner);
                     }
                     break;
                 case 3:
