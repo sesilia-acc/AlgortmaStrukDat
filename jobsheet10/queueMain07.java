@@ -10,19 +10,30 @@ public class queueMain07 {
         queue07 q = new queue07(n);
         int pilih;
 
+        boolean antri = true;
         do {
             menu();
             pilih = sc.nextInt();
             switch (pilih) {
                 case 1:
-                    System.out.print("Masukkan data baru: ");
-                    int datamasuk = sc.nextInt();
-                    q.Enqueue(datamasuk);
+                    if (q.isFull()) {
+                        System.out.println("Queue sudah penuh");
+                        antri = false;
+                    } else {
+                        System.out.print("Masukkan data baru: ");
+                        int datamasuk = sc.nextInt();
+                        q.Enqueue(datamasuk);
+                    }
                     break;
                 case 2:
-                    int dataKeluar = q.Dequeue();
-                    if (dataKeluar != -1) {
-                        System.out.println("Data yang keluar: " + dataKeluar);
+                    if (q.isEmpthy()) {
+                        System.out.println("Queue masih kosong");
+                        antri = false;
+                    } else {
+                        int dataKeluar = q.Dequeue();
+                        if (dataKeluar != -1) {
+                            System.out.println("Data yang keluar: " + dataKeluar);
+                        }
                     }
                     break;
                 case 3:
